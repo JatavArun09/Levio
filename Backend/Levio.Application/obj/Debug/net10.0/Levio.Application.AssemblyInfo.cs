@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Levio.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05faef9da122b8d126a40cd6ef8fb3de921f8c5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3ed0734f3f0e1dda5b027f5954c5c9a1a27c4da")]
 [assembly: System.Reflection.AssemblyProductAttribute("Levio.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Levio.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

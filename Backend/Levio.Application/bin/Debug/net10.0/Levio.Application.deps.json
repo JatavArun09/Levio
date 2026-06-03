@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {
       "Levio.Application/1.0.0": {
+        "dependencies": {
+          "Levio.Domain": "1.0.0"
+        },
         "runtime": {
           "Levio.Application.dll": {}
+        }
+      },
+      "Levio.Domain/1.0.0": {
+        "runtime": {
+          "Levio.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Levio.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Levio.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

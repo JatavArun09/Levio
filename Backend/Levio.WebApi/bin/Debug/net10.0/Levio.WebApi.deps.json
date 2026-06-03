@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "Levio.WebApi/1.0.0": {
         "dependencies": {
+          "Levio.Application": "1.0.0",
+          "Levio.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.3"
         },
         "runtime": {
@@ -32,6 +34,37 @@
             "fileVersion": "2.0.0.0"
           }
         }
+      },
+      "Levio.Application/1.0.0": {
+        "dependencies": {
+          "Levio.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Levio.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Levio.Domain/1.0.0": {
+        "runtime": {
+          "Levio.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Levio.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Levio.Application": "1.0.0",
+          "Levio.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Levio.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -54,6 +87,21 @@
       "sha512": "sha512-GGYLfzV/G/ct80OZ45JxnWP7NvMX1BCugn/lX7TH5o0lcVaviavsLMTxmFV2AybXWjbi3h6FF1vgZiTK6PXndw==",
       "path": "microsoft.openapi/2.0.0",
       "hashPath": "microsoft.openapi.2.0.0.nupkg.sha512"
+    },
+    "Levio.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Levio.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Levio.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

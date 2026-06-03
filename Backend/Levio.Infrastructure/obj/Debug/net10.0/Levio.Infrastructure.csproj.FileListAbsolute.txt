@@ -1,11 +1,17 @@
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Infrastructure.deps.json
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Infrastructure.dll
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Infrastructure.pdb
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Application.dll
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Domain.dll
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Application.pdb
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Domain.pdb
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.csproj.AssemblyReference.cache
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.AssemblyInfoInputs.cache
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.AssemblyInfo.cs
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.sourcelink.json
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.In.990BD597.Up2Date
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.dll
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\refint\Levio.Infrastructure.dll
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.pdb

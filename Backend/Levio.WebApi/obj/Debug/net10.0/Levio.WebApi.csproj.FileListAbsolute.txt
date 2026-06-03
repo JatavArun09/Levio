@@ -8,6 +8,12 @@ C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.WebApi.dll
 C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.WebApi.pdb
 C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.Application.dll
+C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.Domain.dll
+C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.Infrastructure.dll
+C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.Application.pdb
+C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.Infrastructure.pdb
+C:\Arun\DotNet\Levio\Backend\Levio.WebApi\bin\Debug\net10.0\Levio.Domain.pdb
 C:\Arun\DotNet\Levio\Backend\Levio.WebApi\obj\Debug\net10.0\Levio.WebApi.csproj.AssemblyReference.cache
 C:\Arun\DotNet\Levio\Backend\Levio.WebApi\obj\Debug\net10.0\rpswa.dswa.cache.json
 C:\Arun\DotNet\Levio\Backend\Levio.WebApi\obj\Debug\net10.0\Levio.WebApi.GeneratedMSBuildEditorConfig.editorconfig
