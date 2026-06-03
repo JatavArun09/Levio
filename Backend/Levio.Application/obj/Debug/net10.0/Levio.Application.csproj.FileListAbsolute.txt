@@ -1,0 +1,12 @@
+C:\Arun\DotNet\Levio\Backend\Levio.Application\bin\Debug\net10.0\Levio.Application.deps.json
+C:\Arun\DotNet\Levio\Backend\Levio.Application\bin\Debug\net10.0\Levio.Application.dll
+C:\Arun\DotNet\Levio\Backend\Levio.Application\bin\Debug\net10.0\Levio.Application.pdb
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\Levio.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\Levio.Application.AssemblyInfoInputs.cache
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\Levio.Application.AssemblyInfo.cs
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\Levio.Application.csproj.CoreCompileInputs.cache
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\Levio.Application.sourcelink.json
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\Levio.Application.dll
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\refint\Levio.Application.dll
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\Levio.Application.pdb
+C:\Arun\DotNet\Levio\Backend\Levio.Application\obj\Debug\net10.0\ref\Levio.Application.dll

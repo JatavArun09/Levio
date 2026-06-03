@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Levio.Application\Levio.Application.csproj" />
+    <ProjectReference Include="..\Levio.Domain\Levio.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
