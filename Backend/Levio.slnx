@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="Levio.Application/Levio.Application.csproj" Id="8f49355c-592b-4cc3-80f8-cfb9f618b520" />
-  <Project Path="Levio.Domain/Levio.Domain.csproj" Id="b8e9861d-7769-404d-b073-068774494d2e" />
-  <Project Path="Levio.Infrastructure/Levio.Infrastructure.csproj" Id="fcc4a884-a714-4383-b779-7d5fd4404af3" />
   <Project Path="Levio.WebApi/Levio.WebApi.csproj" />
+<Project Path="Levio.Application/Levio.Application.csproj" />
+<Project Path="Levio.Infrastructure/Levio.Infrastructure.csproj" />
+<Project Path="Levio.Domain/Levio.Domain.csproj" />
 </Solution>
