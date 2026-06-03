@@ -7,6 +7,6 @@ namespace Levio.Domain.Entities
     {
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; }
-        public ICollection<UserRoleType> UserRoles { get; set; } = new List<UserRoleType>();
+        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
     }
 }

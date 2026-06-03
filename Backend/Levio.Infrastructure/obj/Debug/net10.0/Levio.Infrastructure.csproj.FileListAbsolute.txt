@@ -16,3 +16,5 @@ C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infras
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\refint\Levio.Infrastructure.dll
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.pdb
 C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\ref\Levio.Infrastructure.dll
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\bin\Debug\net10.0\Levio.Infrastructure.runtimeconfig.json
+C:\Arun\DotNet\Levio\Backend\Levio.Infrastructure\obj\Debug\net10.0\Levio.Infrastructure.genruntimeconfig.cache

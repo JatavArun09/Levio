@@ -3,6 +3,74 @@
   "WorkspaceRootPath": "C:\\Arun\\DotNet\\Levio\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\exceptions\\unauthorizeddomainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\exceptions\\unauthorizeddomainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\exceptions\\leavebalanceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\exceptions\\leavebalanceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\leavebalance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\leavebalance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\enums\\halfdaytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\enums\\halfdaytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\enums\\userroletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\enums\\userroletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\enums\\leavestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\enums\\leavestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\enums\\leavetypecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\enums\\leavetypecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,6 +95,227 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Repositories\\IRepository.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IRepository.cs*",
+              "RelativeToolTip": "Levio.Domain\\Repositories\\IRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T10:01:26.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnauthorizedDomainException.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Exceptions\\UnauthorizedDomainException.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Exceptions\\UnauthorizedDomainException.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Exceptions\\UnauthorizedDomainException.cs",
+              "RelativeToolTip": "Levio.Domain\\Exceptions\\UnauthorizedDomainException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:54:05.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LeaveBalanceException.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Exceptions\\LeaveBalanceException.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Exceptions\\LeaveBalanceException.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Exceptions\\LeaveBalanceException.cs",
+              "RelativeToolTip": "Levio.Domain\\Exceptions\\LeaveBalanceException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:53:28.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DomainException.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Exceptions\\DomainException.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Exceptions\\DomainException.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Exceptions\\DomainException.cs",
+              "RelativeToolTip": "Levio.Domain\\Exceptions\\DomainException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:52:01.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\AuditLog.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\AuditLog.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\AuditLog.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\AuditLog.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:35:37.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\RefreshToken.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\RefreshToken.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:35:14.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LeaveBalance.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\LeaveBalance.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\LeaveBalance.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\LeaveBalance.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\LeaveBalance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:34:45.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LeaveType.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\LeaveType.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\LeaveType.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\LeaveType.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\LeaveType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:34:25.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeaveRequest.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\LeaveRequest.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\LeaveRequest.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\LeaveRequest.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\LeaveRequest.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA7wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:33:34.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\UserRole.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\UserRole.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\UserRole.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:32:22.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T06:57:52.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\Role.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\Role.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T05:27:00.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Entities\\Department.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Entities\\Department.cs",
+              "RelativeToolTip": "Levio.Domain\\Entities\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T05:22:02.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LeaveTypeCode.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\LeaveTypeCode.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Enums\\LeaveTypeCode.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\LeaveTypeCode.cs",
+              "RelativeToolTip": "Levio.Domain\\Enums\\LeaveTypeCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T05:19:57.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserRoleType.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\UserRoleType.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Enums\\UserRoleType.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\UserRoleType.cs",
+              "RelativeToolTip": "Levio.Domain\\Enums\\UserRoleType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T05:18:13.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HalfDayType.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\HalfDayType.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Enums\\HalfDayType.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\HalfDayType.cs",
+              "RelativeToolTip": "Levio.Domain\\Enums\\HalfDayType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T05:17:12.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LeaveStatus.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\LeaveStatus.cs",
+              "RelativeDocumentMoniker": "Levio.Domain\\Enums\\LeaveStatus.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Enums\\LeaveStatus.cs",
+              "RelativeToolTip": "Levio.Domain\\Enums\\LeaveStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T05:15:16.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Levio.Domain\\Common\\BaseEntity.cs",
