@@ -1,10 +1,9 @@
-﻿using Levio.Infrastructure.Data;
+﻿using Levio.Domain.Repositories;
+using Levio.Infrastructure.Data;
+using Levio.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Levio.Infrastructure
 {
@@ -16,9 +15,10 @@ namespace Levio.Infrastructure
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             // Register repositories
-            //services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             // Register other services (e.g., authentication, authorization, etc.)
-            // services.AddScoped<IAuthService, AuthService>();
             return services;
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Levio.Domain.Common;
+using System.Linq.Expressions;
 
 namespace Levio.Domain.Repositories
 {
@@ -8,9 +9,12 @@ namespace Levio.Domain.Repositories
 
         Task<List<T>> GetAllAsync();
 
-        Task AddAsync(T entity);
+        Task<List<T>> FindAsync(Expression<Func<T, bool>> predicate);
 
-        Task UpdateAsync(T entity);
-        Task DeleteAsync(T entity);
+        Task AddAsync(T entity);
+        Task AddRangeAsync(IEnumerable<T> entities);
+        void Update(T entity);
+        void Delete(T entity);
+        IQueryable<T> Query();
     }
 }
