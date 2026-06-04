@@ -1,4 +1,6 @@
-﻿using Levio.Domain.Repositories;
+﻿using Levio.Application.Interfaces;
+using Levio.Domain.Repositories;
+using Levio.Infrastructure.Authentication;
 using Levio.Infrastructure.Data;
 using Levio.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +20,8 @@ namespace Levio.Infrastructure
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IPasswordHasher, PasswordHasher>();
+            services.AddScoped<IJwtTokenService, JwtTokenService>();
             // Register other services (e.g., authentication, authorization, etc.)
             return services;
         }

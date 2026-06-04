@@ -17,6 +17,7 @@ namespace Levio.Infrastructure.Data
         public DbSet<LeaveBalance> LeaveBalances => Set<LeaveBalance>();
         public DbSet<LeaveRequest> LeaveRequests => Set<LeaveRequest>();
         public DbSet<RefreshToken> LeaveRefreshTokens => Set<RefreshToken>();
+        public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
         public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

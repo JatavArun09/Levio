@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Levio.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+562ea59acaf01ad3cae02e08c9ce9b6ffd1ec127")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63ef735fdd486e4e86718da3ceac1f95589bb7bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Levio.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Levio.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
