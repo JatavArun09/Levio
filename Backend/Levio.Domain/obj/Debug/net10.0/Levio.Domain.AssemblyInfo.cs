@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Levio.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9959f042cb6d749c037a208bc7b94af6253dc9c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa6b1e5b696a52f88ab38bda2952095042e58202")]
 [assembly: System.Reflection.AssemblyProductAttribute("Levio.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Levio.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
