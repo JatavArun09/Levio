@@ -8,3 +8,9 @@
 **/.vs/
 **/bin/
 **/obj/
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+*.csproj.user
+*.suo
