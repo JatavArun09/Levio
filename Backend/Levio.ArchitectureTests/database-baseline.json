@@ -1,0 +1,1203 @@
+{
+  "Tables": [
+    {
+      "Name": "AuditLogs",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "Action",
+          "StoreType": "nvarchar(200)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "CorrelationId",
+          "StoreType": "nvarchar(100)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "EntityId",
+          "StoreType": "nvarchar(100)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "EntityName",
+          "StoreType": "nvarchar(200)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IpAddress",
+          "StoreType": "nvarchar(100)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "NewValues",
+          "StoreType": "nvarchar(max)",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "OldValues",
+          "StoreType": "nvarchar(max)",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UserId",
+          "StoreType": "bigint",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_AuditLogs",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_AuditLogs_CreatedAt",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "CreatedAt"
+          ]
+        },
+        {
+          "Name": "IX_AuditLogs_UserId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "UserId"
+          ]
+        }
+      ],
+      "ForeignKeys": [
+        {
+          "Name": "FK_AuditLogs_Users_UserId",
+          "Principal": "Users",
+          "OnDeleteAction": 0,
+          "Columns": [
+            "UserId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Departments",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Description",
+          "StoreType": "nvarchar(500)",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "ManagerId",
+          "StoreType": "bigint",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Name",
+          "StoreType": "nvarchar(150)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_Departments",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_Departments_ManagerId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "ManagerId"
+          ]
+        },
+        {
+          "Name": "IX_Departments_Name",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "Name"
+          ]
+        }
+      ],
+      "ForeignKeys": [
+        {
+          "Name": "FK_Departments_Users_ManagerId",
+          "Principal": "Users",
+          "OnDeleteAction": 1,
+          "Columns": [
+            "ManagerId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "LeaveBalances",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "AllocatedDays",
+          "StoreType": "decimal(5,2)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "LeaveTypeId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "RemainingDays",
+          "StoreType": "decimal(5,2)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UsedDays",
+          "StoreType": "decimal(5,2)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UserId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Year",
+          "StoreType": "int",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_LeaveBalances",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_LeaveBalances_LeaveTypeId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "LeaveTypeId"
+          ]
+        },
+        {
+          "Name": "IX_LeaveBalances_UserId_LeaveTypeId_Year",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "UserId",
+            "LeaveTypeId",
+            "Year"
+          ]
+        }
+      ],
+      "ForeignKeys": [
+        {
+          "Name": "FK_LeaveBalances_LeaveTypes_LeaveTypeId",
+          "Principal": "LeaveTypes",
+          "OnDeleteAction": 2,
+          "Columns": [
+            "LeaveTypeId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        },
+        {
+          "Name": "FK_LeaveBalances_Users_UserId",
+          "Principal": "Users",
+          "OnDeleteAction": 2,
+          "Columns": [
+            "UserId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "LeaveRequests",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "ApprovedAt",
+          "StoreType": "datetime2",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "ApprovedByUserId",
+          "StoreType": "bigint",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "EndDate",
+          "StoreType": "date",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "HalfDayType",
+          "StoreType": "int",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsHalfDay",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "LeaveTypeId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "NumberOfDays",
+          "StoreType": "decimal(5,2)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Reason",
+          "StoreType": "nvarchar(1000)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "RejectionComment",
+          "StoreType": "nvarchar(1000)",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "StartDate",
+          "StoreType": "date",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Status",
+          "StoreType": "int",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UserId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_LeaveRequests",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_LeaveRequests_EndDate",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "EndDate"
+          ]
+        },
+        {
+          "Name": "IX_LeaveRequests_LeaveTypeId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "LeaveTypeId"
+          ]
+        },
+        {
+          "Name": "IX_LeaveRequests_StartDate",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "StartDate"
+          ]
+        },
+        {
+          "Name": "IX_LeaveRequests_Status",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "Status"
+          ]
+        },
+        {
+          "Name": "IX_LeaveRequests_UserId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "UserId"
+          ]
+        }
+      ],
+      "ForeignKeys": [
+        {
+          "Name": "FK_LeaveRequests_LeaveTypes_LeaveTypeId",
+          "Principal": "LeaveTypes",
+          "OnDeleteAction": 1,
+          "Columns": [
+            "LeaveTypeId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        },
+        {
+          "Name": "FK_LeaveRequests_Users_UserId",
+          "Principal": "Users",
+          "OnDeleteAction": 1,
+          "Columns": [
+            "UserId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "LeaveTypes",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "Code",
+          "StoreType": "int",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "DefaultDaysPerYear",
+          "StoreType": "int",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsActive",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Name",
+          "StoreType": "nvarchar(100)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_LeaveTypes",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_LeaveTypes_Code",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "Code"
+          ]
+        }
+      ],
+      "ForeignKeys": []
+    },
+    {
+      "Name": "RefreshTokens",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "ExpiresAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsRevoked",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "RevokedAt",
+          "StoreType": "datetime2",
+          "IsNullable": true,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "TokenHash",
+          "StoreType": "nvarchar(500)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UserId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_RefreshTokens",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_RefreshTokens_TokenHash",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "TokenHash"
+          ]
+        },
+        {
+          "Name": "IX_RefreshTokens_UserId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "UserId"
+          ]
+        }
+      ],
+      "ForeignKeys": [
+        {
+          "Name": "FK_RefreshTokens_Users_UserId",
+          "Principal": "Users",
+          "OnDeleteAction": 2,
+          "Columns": [
+            "UserId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Roles",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Description",
+          "StoreType": "nvarchar(500)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Name",
+          "StoreType": "nvarchar(100)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_Roles",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_Roles_Name",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "Name"
+          ]
+        }
+      ],
+      "ForeignKeys": []
+    },
+    {
+      "Name": "UserRoles",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "RoleId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UserId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_UserRoles",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_UserRoles_RoleId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "RoleId"
+          ]
+        },
+        {
+          "Name": "IX_UserRoles_UserId_RoleId",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "UserId",
+            "RoleId"
+          ]
+        }
+      ],
+      "ForeignKeys": [
+        {
+          "Name": "FK_UserRoles_Roles_RoleId",
+          "Principal": "Roles",
+          "OnDeleteAction": 2,
+          "Columns": [
+            "RoleId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        },
+        {
+          "Name": "FK_UserRoles_Users_UserId",
+          "Principal": "Users",
+          "OnDeleteAction": 2,
+          "Columns": [
+            "UserId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Users",
+      "Schema": null,
+      "Columns": [
+        {
+          "Name": "CreatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "DateOfJoining",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "DepartmentId",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Email",
+          "StoreType": "nvarchar(255)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "EmployeeCode",
+          "StoreType": "nvarchar(20)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "FirstName",
+          "StoreType": "nvarchar(100)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "Id",
+          "StoreType": "bigint",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "ISActive",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "IsDeleted",
+          "StoreType": "bit",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "LastName",
+          "StoreType": "nvarchar(100)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "PasswordHash",
+          "StoreType": "nvarchar(500)",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        },
+        {
+          "Name": "UpdatedAt",
+          "StoreType": "datetime2",
+          "IsNullable": false,
+          "Default": null,
+          "Computed": null
+        }
+      ],
+      "Keys": [
+        {
+          "Name": "PK_Users",
+          "Columns": [
+            "Id"
+          ]
+        }
+      ],
+      "Indexes": [
+        {
+          "Name": "IX_Users_DepartmentId",
+          "IsUnique": false,
+          "Filter": null,
+          "Columns": [
+            "DepartmentId"
+          ]
+        },
+        {
+          "Name": "IX_Users_Email",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "Email"
+          ]
+        },
+        {
+          "Name": "IX_Users_EmployeeCode",
+          "IsUnique": true,
+          "Filter": null,
+          "Columns": [
+            "EmployeeCode"
+          ]
+        }
+      ],
+      "ForeignKeys": [
+        {
+          "Name": "FK_Users_Departments_DepartmentId",
+          "Principal": "Departments",
+          "OnDeleteAction": 1,
+          "Columns": [
+            "DepartmentId"
+          ],
+          "PrincipalColumns": [
+            "Id"
+          ]
+        }
+      ]
+    }
+  ],
+  "Seeds": [
+    {
+      "Table": "AuditLogs",
+      "Rows": []
+    },
+    {
+      "Table": "Departments",
+      "Rows": [
+        {
+          "CreatedAt": "2026-06-01T00:00:00",
+          "Description": "System Administration",
+          "Id": 1,
+          "IsDeleted": false,
+          "Manager": null,
+          "ManagerId": null,
+          "Name": "Administration",
+          "UpdatedAt": "0001-01-01T00:00:00",
+          "Users": []
+        }
+      ]
+    },
+    {
+      "Table": "LeaveBalances",
+      "Rows": []
+    },
+    {
+      "Table": "LeaveRequests",
+      "Rows": []
+    },
+    {
+      "Table": "LeaveTypes",
+      "Rows": [
+        {
+          "Code": 1,
+          "CreatedAt": "2026-06-01T00:00:00",
+          "DefaultDaysPerYear": 12,
+          "Id": 1,
+          "IsActive": true,
+          "IsDeleted": false,
+          "LeaveBalances": [],
+          "LeaveRequests": [],
+          "Name": "Casual Leave",
+          "UpdatedAt": "0001-01-01T00:00:00"
+        },
+        {
+          "Code": 2,
+          "CreatedAt": "2026-06-01T00:00:00",
+          "DefaultDaysPerYear": 12,
+          "Id": 2,
+          "IsActive": true,
+          "IsDeleted": false,
+          "LeaveBalances": [],
+          "LeaveRequests": [],
+          "Name": "Sick Leave",
+          "UpdatedAt": "0001-01-01T00:00:00"
+        },
+        {
+          "Code": 3,
+          "CreatedAt": "2026-06-01T00:00:00",
+          "DefaultDaysPerYear": 18,
+          "Id": 3,
+          "IsActive": true,
+          "IsDeleted": false,
+          "LeaveBalances": [],
+          "LeaveRequests": [],
+          "Name": "Earned Leave",
+          "UpdatedAt": "0001-01-01T00:00:00"
+        },
+        {
+          "Code": 4,
+          "CreatedAt": "2026-06-01T00:00:00",
+          "DefaultDaysPerYear": 0,
+          "Id": 4,
+          "IsActive": true,
+          "IsDeleted": false,
+          "LeaveBalances": [],
+          "LeaveRequests": [],
+          "Name": "Work From Home",
+          "UpdatedAt": "0001-01-01T00:00:00"
+        }
+      ]
+    },
+    {
+      "Table": "RefreshTokens",
+      "Rows": []
+    },
+    {
+      "Table": "Roles",
+      "Rows": [
+        {
+          "CreatedAt": "2026-06-01T00:00:00",
+          "Description": "Employee role",
+          "Id": 1,
+          "IsDeleted": false,
+          "Name": "Employee",
+          "UpdatedAt": "0001-01-01T00:00:00",
+          "UserRoles": []
+        },
+        {
+          "CreatedAt": "2026-06-01T00:00:00",
+          "Description": "Manager role",
+          "Id": 2,
+          "IsDeleted": false,
+          "Name": "Manager",
+          "UpdatedAt": "0001-01-01T00:00:00",
+          "UserRoles": []
+        },
+        {
+          "CreatedAt": "2026-06-01T00:00:00",
+          "Description": "HR Administrator",
+          "Id": 3,
+          "IsDeleted": false,
+          "Name": "HRAdmin",
+          "UpdatedAt": "0001-01-01T00:00:00",
+          "UserRoles": []
+        }
+      ]
+    },
+    {
+      "Table": "UserRoles",
+      "Rows": [
+        {
+          "CreatedAt": "0001-01-01T00:00:00",
+          "Id": 1,
+          "IsDeleted": false,
+          "Role": null,
+          "RoleId": 3,
+          "UpdatedAt": "0001-01-01T00:00:00",
+          "User": null,
+          "UserId": 1
+        }
+      ]
+    },
+    {
+      "Table": "Users",
+      "Rows": [
+        {
+          "AuditLogs": [],
+          "CreatedAt": "2026-06-01T00:00:00",
+          "DateOfJoining": "0001-01-01T00:00:00",
+          "Department": null,
+          "DepartmentId": 1,
+          "Email": "admin@levio.com",
+          "EmployeeCode": "EMP001",
+          "FirstName": "System",
+          "Id": 1,
+          "ISActive": true,
+          "IsDeleted": false,
+          "LastName": "Admin",
+          "LeaveBalances": [],
+          "LeaveRequests": [],
+          "PasswordHash": "AQAAAAIAAYagAAAAEJ1EaeE3EgsZvxXpcO8j45nWHbhcZ9FWWcsB/NNqDvSj48zvRYl/60BVWFWrD4KrKA==",
+          "RefreshTokens": [],
+          "UpdatedAt": "0001-01-01T00:00:00",
+          "UserRoles": []
+        }
+      ]
+    }
+  ],
+  "Migrations": [
+    "20260604035801_InitialCreate",
+    "20260605105224_FixAdminSeed1"
+  ],
+  "MigrationScript": "IF OBJECT_ID(N\u0027[__EFMigrationsHistory]\u0027) IS NULL\r\nBEGIN\r\n    CREATE TABLE [__EFMigrationsHistory] (\r\n        [MigrationId] nvarchar(150) NOT NULL,\r\n        [ProductVersion] nvarchar(32) NOT NULL,\r\n        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])\r\n    );\r\nEND;\r\nGO\r\n\r\nBEGIN TRANSACTION;\r\nCREATE TABLE [LeaveTypes] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [Name] nvarchar(100) NOT NULL,\r\n    [Code] int NOT NULL,\r\n    [DefaultDaysPerYear] int NOT NULL,\r\n    [IsActive] bit NOT NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_LeaveTypes] PRIMARY KEY ([Id])\r\n);\r\n\r\nCREATE TABLE [Roles] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [Name] nvarchar(100) NOT NULL,\r\n    [Description] nvarchar(500) NOT NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])\r\n);\r\n\r\nCREATE TABLE [AuditLogs] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [UserId] bigint NULL,\r\n    [Action] nvarchar(200) NOT NULL,\r\n    [EntityName] nvarchar(200) NOT NULL,\r\n    [EntityId] nvarchar(100) NOT NULL,\r\n    [OldValues] nvarchar(max) NULL,\r\n    [NewValues] nvarchar(max) NULL,\r\n    [IpAddress] nvarchar(100) NOT NULL,\r\n    [CorrelationId] nvarchar(100) NOT NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_AuditLogs] PRIMARY KEY ([Id])\r\n);\r\n\r\nCREATE TABLE [Departments] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [Name] nvarchar(150) NOT NULL,\r\n    [Description] nvarchar(500) NULL,\r\n    [ManagerId] bigint NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_Departments] PRIMARY KEY ([Id])\r\n);\r\n\r\nCREATE TABLE [Users] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [EmployeeCode] nvarchar(20) NOT NULL,\r\n    [FirstName] nvarchar(100) NOT NULL,\r\n    [LastName] nvarchar(100) NOT NULL,\r\n    [Email] nvarchar(255) NOT NULL,\r\n    [PasswordHash] nvarchar(500) NOT NULL,\r\n    [ISActive] bit NOT NULL,\r\n    [DateOfJoining] datetime2 NOT NULL,\r\n    [DepartmentId] bigint NOT NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),\r\n    CONSTRAINT [FK_Users_Departments_DepartmentId] FOREIGN KEY ([DepartmentId]) REFERENCES [Departments] ([Id]) ON DELETE NO ACTION\r\n);\r\n\r\nCREATE TABLE [LeaveBalances] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [UserId] bigint NOT NULL,\r\n    [LeaveTypeId] bigint NOT NULL,\r\n    [Year] int NOT NULL,\r\n    [AllocatedDays] decimal(5,2) NOT NULL,\r\n    [UsedDays] decimal(5,2) NOT NULL,\r\n    [RemainingDays] decimal(5,2) NOT NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_LeaveBalances] PRIMARY KEY ([Id]),\r\n    CONSTRAINT [FK_LeaveBalances_LeaveTypes_LeaveTypeId] FOREIGN KEY ([LeaveTypeId]) REFERENCES [LeaveTypes] ([Id]) ON DELETE CASCADE,\r\n    CONSTRAINT [FK_LeaveBalances_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE\r\n);\r\n\r\nCREATE TABLE [LeaveRequests] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [UserId] bigint NOT NULL,\r\n    [LeaveTypeId] bigint NOT NULL,\r\n    [StartDate] date NOT NULL,\r\n    [EndDate] date NOT NULL,\r\n    [NumberOfDays] decimal(5,2) NOT NULL,\r\n    [IsHalfDay] bit NOT NULL,\r\n    [HalfDayType] int NULL,\r\n    [Reason] nvarchar(1000) NOT NULL,\r\n    [Status] int NOT NULL,\r\n    [RejectionComment] nvarchar(1000) NULL,\r\n    [ApprovedAt] datetime2 NULL,\r\n    [ApprovedByUserId] bigint NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_LeaveRequests] PRIMARY KEY ([Id]),\r\n    CONSTRAINT [FK_LeaveRequests_LeaveTypes_LeaveTypeId] FOREIGN KEY ([LeaveTypeId]) REFERENCES [LeaveTypes] ([Id]) ON DELETE NO ACTION,\r\n    CONSTRAINT [FK_LeaveRequests_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION\r\n);\r\n\r\nCREATE TABLE [RefreshTokens] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [UserId] bigint NOT NULL,\r\n    [TokenHash] nvarchar(500) NOT NULL,\r\n    [ExpiresAt] datetime2 NOT NULL,\r\n    [RevokedAt] datetime2 NULL,\r\n    [IsRevoked] bit NOT NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_RefreshTokens] PRIMARY KEY ([Id]),\r\n    CONSTRAINT [FK_RefreshTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE\r\n);\r\n\r\nCREATE TABLE [UserRoles] (\r\n    [Id] bigint NOT NULL IDENTITY,\r\n    [UserId] bigint NOT NULL,\r\n    [RoleId] bigint NOT NULL,\r\n    [CreatedAt] datetime2 NOT NULL,\r\n    [UpdatedAt] datetime2 NOT NULL,\r\n    [IsDeleted] bit NOT NULL,\r\n    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([Id]),\r\n    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,\r\n    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE\r\n);\r\n\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027Code\u0027, N\u0027CreatedAt\u0027, N\u0027DefaultDaysPerYear\u0027, N\u0027IsActive\u0027, N\u0027IsDeleted\u0027, N\u0027Name\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[LeaveTypes]\u0027))\r\n    SET IDENTITY_INSERT [LeaveTypes] ON;\r\nINSERT INTO [LeaveTypes] ([Id], [Code], [CreatedAt], [DefaultDaysPerYear], [IsActive], [IsDeleted], [Name], [UpdatedAt])\r\nVALUES (CAST(1 AS bigint), 1, \u00272026-06-01T00:00:00.0000000\u0027, 12, CAST(1 AS bit), CAST(0 AS bit), N\u0027Casual Leave\u0027, \u00270001-01-01T00:00:00.0000000\u0027),\r\n(CAST(2 AS bigint), 2, \u00272026-06-01T00:00:00.0000000\u0027, 12, CAST(1 AS bit), CAST(0 AS bit), N\u0027Sick Leave\u0027, \u00270001-01-01T00:00:00.0000000\u0027),\r\n(CAST(3 AS bigint), 3, \u00272026-06-01T00:00:00.0000000\u0027, 18, CAST(1 AS bit), CAST(0 AS bit), N\u0027Earned Leave\u0027, \u00270001-01-01T00:00:00.0000000\u0027),\r\n(CAST(4 AS bigint), 4, \u00272026-06-01T00:00:00.0000000\u0027, 0, CAST(1 AS bit), CAST(0 AS bit), N\u0027Work From Home\u0027, \u00270001-01-01T00:00:00.0000000\u0027);\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027Code\u0027, N\u0027CreatedAt\u0027, N\u0027DefaultDaysPerYear\u0027, N\u0027IsActive\u0027, N\u0027IsDeleted\u0027, N\u0027Name\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[LeaveTypes]\u0027))\r\n    SET IDENTITY_INSERT [LeaveTypes] OFF;\r\n\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027Description\u0027, N\u0027IsDeleted\u0027, N\u0027Name\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[Roles]\u0027))\r\n    SET IDENTITY_INSERT [Roles] ON;\r\nINSERT INTO [Roles] ([Id], [CreatedAt], [Description], [IsDeleted], [Name], [UpdatedAt])\r\nVALUES (CAST(1 AS bigint), \u00272026-06-01T00:00:00.0000000\u0027, N\u0027Employee role\u0027, CAST(0 AS bit), N\u0027Employee\u0027, \u00270001-01-01T00:00:00.0000000\u0027),\r\n(CAST(2 AS bigint), \u00272026-06-01T00:00:00.0000000\u0027, N\u0027Manager role\u0027, CAST(0 AS bit), N\u0027Manager\u0027, \u00270001-01-01T00:00:00.0000000\u0027),\r\n(CAST(3 AS bigint), \u00272026-06-01T00:00:00.0000000\u0027, N\u0027HR Administrator\u0027, CAST(0 AS bit), N\u0027HRAdmin\u0027, \u00270001-01-01T00:00:00.0000000\u0027);\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027Description\u0027, N\u0027IsDeleted\u0027, N\u0027Name\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[Roles]\u0027))\r\n    SET IDENTITY_INSERT [Roles] OFF;\r\n\r\nCREATE INDEX [IX_AuditLogs_CreatedAt] ON [AuditLogs] ([CreatedAt]);\r\n\r\nCREATE INDEX [IX_AuditLogs_UserId] ON [AuditLogs] ([UserId]);\r\n\r\nCREATE INDEX [IX_Departments_ManagerId] ON [Departments] ([ManagerId]);\r\n\r\nCREATE UNIQUE INDEX [IX_Departments_Name] ON [Departments] ([Name]);\r\n\r\nCREATE INDEX [IX_LeaveBalances_LeaveTypeId] ON [LeaveBalances] ([LeaveTypeId]);\r\n\r\nCREATE UNIQUE INDEX [IX_LeaveBalances_UserId_LeaveTypeId_Year] ON [LeaveBalances] ([UserId], [LeaveTypeId], [Year]);\r\n\r\nCREATE INDEX [IX_LeaveRequests_EndDate] ON [LeaveRequests] ([EndDate]);\r\n\r\nCREATE INDEX [IX_LeaveRequests_LeaveTypeId] ON [LeaveRequests] ([LeaveTypeId]);\r\n\r\nCREATE INDEX [IX_LeaveRequests_StartDate] ON [LeaveRequests] ([StartDate]);\r\n\r\nCREATE INDEX [IX_LeaveRequests_Status] ON [LeaveRequests] ([Status]);\r\n\r\nCREATE INDEX [IX_LeaveRequests_UserId] ON [LeaveRequests] ([UserId]);\r\n\r\nCREATE UNIQUE INDEX [IX_LeaveTypes_Code] ON [LeaveTypes] ([Code]);\r\n\r\nCREATE UNIQUE INDEX [IX_RefreshTokens_TokenHash] ON [RefreshTokens] ([TokenHash]);\r\n\r\nCREATE INDEX [IX_RefreshTokens_UserId] ON [RefreshTokens] ([UserId]);\r\n\r\nCREATE UNIQUE INDEX [IX_Roles_Name] ON [Roles] ([Name]);\r\n\r\nCREATE INDEX [IX_UserRoles_RoleId] ON [UserRoles] ([RoleId]);\r\n\r\nCREATE UNIQUE INDEX [IX_UserRoles_UserId_RoleId] ON [UserRoles] ([UserId], [RoleId]);\r\n\r\nCREATE INDEX [IX_Users_DepartmentId] ON [Users] ([DepartmentId]);\r\n\r\nCREATE UNIQUE INDEX [IX_Users_Email] ON [Users] ([Email]);\r\n\r\nCREATE UNIQUE INDEX [IX_Users_EmployeeCode] ON [Users] ([EmployeeCode]);\r\n\r\nALTER TABLE [AuditLogs] ADD CONSTRAINT [FK_AuditLogs_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]);\r\n\r\nALTER TABLE [Departments] ADD CONSTRAINT [FK_Departments_Users_ManagerId] FOREIGN KEY ([ManagerId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION;\r\n\r\nINSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])\r\nVALUES (N\u002720260604035801_InitialCreate\u0027, N\u002710.0.8\u0027);\r\n\r\nCOMMIT;\r\nGO\r\n\r\nBEGIN TRANSACTION;\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027Description\u0027, N\u0027IsDeleted\u0027, N\u0027ManagerId\u0027, N\u0027Name\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[Departments]\u0027))\r\n    SET IDENTITY_INSERT [Departments] ON;\r\nINSERT INTO [Departments] ([Id], [CreatedAt], [Description], [IsDeleted], [ManagerId], [Name], [UpdatedAt])\r\nVALUES (CAST(1 AS bigint), \u00272026-06-01T00:00:00.0000000\u0027, N\u0027System Administration\u0027, CAST(0 AS bit), NULL, N\u0027Administration\u0027, \u00270001-01-01T00:00:00.0000000\u0027);\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027Description\u0027, N\u0027IsDeleted\u0027, N\u0027ManagerId\u0027, N\u0027Name\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[Departments]\u0027))\r\n    SET IDENTITY_INSERT [Departments] OFF;\r\n\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027DateOfJoining\u0027, N\u0027DepartmentId\u0027, N\u0027Email\u0027, N\u0027EmployeeCode\u0027, N\u0027FirstName\u0027, N\u0027ISActive\u0027, N\u0027IsDeleted\u0027, N\u0027LastName\u0027, N\u0027PasswordHash\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[Users]\u0027))\r\n    SET IDENTITY_INSERT [Users] ON;\r\nINSERT INTO [Users] ([Id], [CreatedAt], [DateOfJoining], [DepartmentId], [Email], [EmployeeCode], [FirstName], [ISActive], [IsDeleted], [LastName], [PasswordHash], [UpdatedAt])\r\nVALUES (CAST(1 AS bigint), \u00272026-06-01T00:00:00.0000000\u0027, \u00270001-01-01T00:00:00.0000000\u0027, CAST(1 AS bigint), N\u0027admin@levio.com\u0027, N\u0027EMP001\u0027, N\u0027System\u0027, CAST(1 AS bit), CAST(0 AS bit), N\u0027Admin\u0027, N\u0027AQAAAAIAAYagAAAAEJ1EaeE3EgsZvxXpcO8j45nWHbhcZ9FWWcsB/NNqDvSj48zvRYl/60BVWFWrD4KrKA==\u0027, \u00270001-01-01T00:00:00.0000000\u0027);\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027DateOfJoining\u0027, N\u0027DepartmentId\u0027, N\u0027Email\u0027, N\u0027EmployeeCode\u0027, N\u0027FirstName\u0027, N\u0027ISActive\u0027, N\u0027IsDeleted\u0027, N\u0027LastName\u0027, N\u0027PasswordHash\u0027, N\u0027UpdatedAt\u0027) AND [object_id] = OBJECT_ID(N\u0027[Users]\u0027))\r\n    SET IDENTITY_INSERT [Users] OFF;\r\n\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027IsDeleted\u0027, N\u0027RoleId\u0027, N\u0027UpdatedAt\u0027, N\u0027UserId\u0027) AND [object_id] = OBJECT_ID(N\u0027[UserRoles]\u0027))\r\n    SET IDENTITY_INSERT [UserRoles] ON;\r\nINSERT INTO [UserRoles] ([Id], [CreatedAt], [IsDeleted], [RoleId], [UpdatedAt], [UserId])\r\nVALUES (CAST(1 AS bigint), \u00270001-01-01T00:00:00.0000000\u0027, CAST(0 AS bit), CAST(3 AS bigint), \u00270001-01-01T00:00:00.0000000\u0027, CAST(1 AS bigint));\r\nIF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N\u0027Id\u0027, N\u0027CreatedAt\u0027, N\u0027IsDeleted\u0027, N\u0027RoleId\u0027, N\u0027UpdatedAt\u0027, N\u0027UserId\u0027) AND [object_id] = OBJECT_ID(N\u0027[UserRoles]\u0027))\r\n    SET IDENTITY_INSERT [UserRoles] OFF;\r\n\r\nINSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])\r\nVALUES (N\u002720260605105224_FixAdminSeed1\u0027, N\u002710.0.8\u0027);\r\n\r\nCOMMIT;\r\nGO\r\n\r\n"
+}

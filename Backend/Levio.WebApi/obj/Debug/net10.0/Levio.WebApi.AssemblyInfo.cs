@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Levio.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+562ea59acaf01ad3cae02e08c9ce9b6ffd1ec127")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe1de579a0e9acc7891e7545c51817794da8c073")]
 [assembly: System.Reflection.AssemblyProductAttribute("Levio.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Levio.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

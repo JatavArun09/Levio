@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Arun\\DotNet\\Levio\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|solutionrelative:levio.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0E36F09-8F61-E1BC-3C1A-1C045BFB55FB}|Modules\\Levio.Modules.Identity\\Levio.Modules.Identity.csproj|c:\\arun\\dotnet\\levio\\backend\\modules\\levio.modules.identity\\identitymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E36F09-8F61-E1BC-3C1A-1C045BFB55FB}|Modules\\Levio.Modules.Identity\\Levio.Modules.Identity.csproj|solutionrelative:modules\\levio.modules.identity\\identitymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|solutionrelative:levio.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|solutionrelative:levio.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C244377-5EAE-D9B1-11B3-7A27AEBDC714}|Levio.Infrastructure\\Levio.Infrastructure.csproj|solutionrelative:levio.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|c:\\arun\\dotnet\\levio\\backend\\levio.domain\\repositories\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E54D896-BB8C-B5AD-FE83-40B2454DBC00}|Levio.Domain\\Levio.Domain.csproj|solutionrelative:levio.domain\\repositories\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE95D908-C5A7-7E55-54BB-6F268A011DCF}|Modules\\Levio.Modules.LeaveManagement\\Levio.Modules.LeaveManagement.csproj|c:\\arun\\dotnet\\levio\\backend\\modules\\levio.modules.leavemanagement\\domain\\entities\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE95D908-C5A7-7E55-54BB-6F268A011DCF}|Modules\\Levio.Modules.LeaveManagement\\Levio.Modules.LeaveManagement.csproj|solutionrelative:modules\\levio.modules.leavemanagement\\domain\\entities\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,100 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Levio.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "Levio.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "Title": "IdentityModule.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Modules\\Levio.Modules.Identity\\IdentityModule.cs",
+              "RelativeDocumentMoniker": "Modules\\Levio.Modules.Identity\\IdentityModule.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Modules\\Levio.Modules.Identity\\IdentityModule.cs",
+              "RelativeToolTip": "Modules\\Levio.Modules.Identity\\IdentityModule.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T05:35:34.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "Levio.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeToolTip": "Levio.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T05:32:31.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Levio.Domain\\Repositories\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IUnitOfWork.cs",
-              "RelativeToolTip": "Levio.Domain\\Repositories\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T04:40:47.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Levio.Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Levio.Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwBsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T05:11:51.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Levio.Domain\\Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "Levio.Domain\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T04:37:15.751Z",
+              "WhenOpened": "2026-10-30T13:09:37.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "Levio.Infrastructure\\Repositories\\Repository.cs",
-              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeToolTip": "Levio.Infrastructure\\Repositories\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Title": "LeaveType.cs",
+              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Modules\\Levio.Modules.LeaveManagement\\Domain\\Entities\\LeaveType.cs",
+              "RelativeDocumentMoniker": "Modules\\Levio.Modules.LeaveManagement\\Domain\\Entities\\LeaveType.cs",
+              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Modules\\Levio.Modules.LeaveManagement\\Domain\\Entities\\LeaveType.cs",
+              "RelativeToolTip": "Modules\\Levio.Modules.LeaveManagement\\Domain\\Entities\\LeaveType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T04:41:31.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IRefreshTokenRepository.cs",
-              "DocumentMoniker": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IRefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "Levio.Domain\\Repositories\\IRefreshTokenRepository.cs",
-              "ToolTip": "C:\\Arun\\DotNet\\Levio\\Backend\\Levio.Domain\\Repositories\\IRefreshTokenRepository.cs",
-              "RelativeToolTip": "Levio.Domain\\Repositories\\IRefreshTokenRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T04:37:49.956Z",
+              "WhenOpened": "2026-10-30T13:06:30.319Z",
               "EditorCaption": ""
             }
           ]

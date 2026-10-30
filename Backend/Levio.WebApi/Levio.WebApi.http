@@ -1,6 +1,14 @@
-@Levio.WebApi_HostAddress = http://localhost:5123
+@Levio.WebApi_HostAddress = https://localhost:7017
 
 GET {{Levio.WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+POST {{Levio.WebApi_HostAddress}}/api/Auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "admin@levio.com",
+  "password": "Admin@123"
+}
