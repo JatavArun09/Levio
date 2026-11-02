@@ -28,8 +28,11 @@ namespace Levio.Modules.Identity.Authentication
             var claims = new List<Claim>
             {
                 new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
 
                 new(JwtRegisteredClaimNames.Email, user.Email),
+
+                new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")),
 
                 new("employeeCode", user.EmployeeCode)
 
@@ -39,11 +42,13 @@ namespace Levio.Modules.Identity.Authentication
             {
                 claims.Add(new Claim(ClaimTypes.Role, role.Role.Name));
             }
+            var now = DateTime.UtcNow;
             var token = new JwtSecurityToken(
                 issuer: _jwtSettings.Issuer,
                 audience: _jwtSettings.Audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.AccessTokenMinutes),
+                notBefore: now,
+                expires: now.AddMinutes(_jwtSettings.AccessTokenMinutes),
                 signingCredentials: creads
             );
 

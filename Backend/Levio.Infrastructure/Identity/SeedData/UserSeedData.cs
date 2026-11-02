@@ -18,7 +18,9 @@ namespace Levio.Infrastructure.Identity.SeedData
                     Email = "admin@levio.com",
                     PasswordHash = "AQAAAAIAAYagAAAAEJ1EaeE3EgsZvxXpcO8j45nWHbhcZ9FWWcsB/NNqDvSj48zvRYl/60BVWFWrD4KrKA==",
                     DepartmentId = 1,
-                    ISActive = true,
+                    // This account remains disabled. Provision the first HR administrator out-of-band
+                    // with a unique password stored outside source control.
+                    ISActive = false,
                     CreatedAt = new DateTime(2026, 6, 1)
                 }
             );

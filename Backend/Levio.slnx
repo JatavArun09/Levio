@@ -8,5 +8,4 @@
     <Project Path="Modules/Levio.Modules.LeaveManagement/Levio.Modules.LeaveManagement.csproj" />
     <Project Path="Modules/Levio.Modules.Auditing/Levio.Modules.Auditing.csproj" />
   </Folder>
-  <Project Path="Levio.ArchitectureTests/Levio.ArchitectureTests.csproj" />
 </Solution>

@@ -81,9 +81,6 @@ namespace Levio.WebApi.Middleware
 
                     response.Message =
                         "An unexpected error occurred.";
-
-                    response.Details =
-                        exception.Message;
                     break;
             }
 
