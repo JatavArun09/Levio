@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Levio.WebApi/Levio.WebApi.csproj" />
+<Project Path="Levio.Application/Levio.Application.csproj" />
+<Project Path="Levio.Infrastructure/Levio.Infrastructure.csproj" />
+<Project Path="Levio.Domain/Levio.Domain.csproj" />
+</Solution>
