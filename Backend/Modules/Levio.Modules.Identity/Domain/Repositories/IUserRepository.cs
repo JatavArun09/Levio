@@ -10,6 +10,7 @@ namespace Levio.Modules.Identity.Domain.Repositories
         Task<User?> GetByEmailAsync(string email);
         Task<User?> GetByEmployeeCodeAsync(string employeeCode);
         Task<User?> GetUserWithRolesAsync(long userId);
+        Task AddAsync(User user);
         Task<bool> ExistsByEmailAsync(string email);
     }
 }

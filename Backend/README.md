@@ -72,44 +72,61 @@ dotnet run --project Backend/Levio.WebApi --launch-profile https
 
 Install the .NET 10 SDK and configure `ConnectionStrings:DefaultConnection` for
 SQL Server using the normal ASP.NET Core configuration providers. Configure
-`JwtSettings:Issuer`, `Audience`, `SecretKey`, `AccessTokenMinutes`, and
-`RefreshTokenDays`. Startup rejects missing issuer/audience, signing keys shorter
-than 32 UTF-8 bytes, and nonpositive token lifetimes. Use environment variables
-or local configuration overrides for deployment credentials.
+`JwtSettings:Issuer`, `Audience`, `AccessTokenMinutes`, and `RefreshTokenDays`;
+provide `JwtSettings__SecretKey` only through a secret manager or environment
+variable. Startup rejects missing issuer/audience, signing keys shorter than 32
+UTF-8 bytes, and nonpositive token lifetimes. For a local PowerShell session:
 
-The HTTPS launch profile listens on `https://localhost:7017` and
-`http://localhost:5123`; Swagger is available at `/swagger` in Development.
-Both Debug profiles open Swagger, and the Development root URL redirects there.
-The HTTP-only profile disables HTTPS redirection through
-`HttpsRedirection__Enabled=false`; HTTPS redirection remains enabled by default
-for the HTTPS profile and deployments.
+```powershell
+$env:JwtSettings__SecretKey = '<a unique secret of at least 32 UTF-8 bytes>'
+```
+
+The HTTPS launch profile listens on `https://localhost:7017`; Swagger is
+available at `/swagger` in Development. HTTP is redirected to HTTPS and HSTS is
+enabled outside Development.
 Use Release configuration if an existing Debug API process locks its output files.
 
-## API compatibility and authentication fixes
+## Authentication and user flow
 
-Existing authentication routes remain:
+The login, refresh, and logout routes are anonymous; the current-user route
+requires a bearer token:
 
 - `POST /api/Auth/login`
 - `POST /api/Auth/refresh-token`
 - `POST /api/Auth/logout`
-- `GET /api/Auth/testing`
+- `GET /api/Auth/me` (requires a bearer token)
 
-The existing `/api/Test/testing`, `/api/Test/admin` and `/api/WeatherForecast`
-diagnostics also remain. Controller discovery explicitly includes Identity.
-Request and response JSON, JWT claims, and role names are preserved.
+All other endpoints require a valid bearer token by default. The former test and
+diagnostic routes have been removed. Controller discovery explicitly includes
+Identity.
 
-JWT issuance and response expiration now use `AccessTokenMinutes` consistently
-(the existing configuration specifies 60 minutes rather than the old hardcoded
-15). Refresh expiry uses `RefreshTokenDays`. Logged-out tokens are rejected by
-refresh validation. The user lookup is asynchronous, and global exception
-handling now maps invalid credentials and refresh tokens to JSON HTTP 401 responses.
-Logout revokes refresh tokens; existing access tokens remain valid until expiry.
+Access tokens expire after 15 minutes by default. Refresh tokens are generated
+cryptographically, stored only as SHA-256 hashes, rotated on use, and placed in a
+`Secure`, `HttpOnly`, `SameSite=Strict` `__Host-levio-refresh` cookie. They are
+never returned in JSON. Login and refresh are rate limited to five requests per
+minute for each client IP. Token validation checks that the user is still active,
+so disabling or deleting a user invalidates their authenticated requests.
+
+There is no public registration route. The legacy seeded HR administrator is
+disabled by migration `20261102050545_DisableDefaultAdministrator`; provision a
+real active HR administrator through the one-time bootstrap configuration before
+enabling user access:
+
+```powershell
+$env:InitialAdministrator__Email = 'hr.admin@example.com'
+$env:InitialAdministrator__EmployeeCode = 'HR001'
+$env:InitialAdministrator__Password = '<14+ character unique password with upper, lower, digit and symbol>'
+```
+
+The bootstrap only creates an account when no active HR administrator exists; it
+never resets or reactivates an existing account. Store the password outside source
+control and remove the bootstrap variables after the account has been created.
 
 ## Database and migrations
 
-Tables, foreign keys, indexes, seeds, migration IDs, context name and migration
-assembly are preserved. Existing databases require no migration for this refactor.
-The API does not automatically apply migrations at startup.
+The API does not automatically apply migrations at startup. Apply the latest
+migration before deploying this version; it disables the legacy default admin
+account in existing databases.
 
 From the repository root, use these commands when intentionally managing a
 development database:
@@ -223,51 +240,6 @@ reservation has one unambiguous annual balance.
 
 Next: phase 9 approval/rejection, team calendar and dashboard; then phase 10 audit
 logging and phase 11 reports. Employee/department/policy administration, balance
-allocation UI, advanced authentication (password management, lockout, hashed/cookie
-refresh tokens), notifications and the React frontend remain unfinished. No email
-delivery, document upload or production deployment is included in this milestone.
-
-## Verification
-
-The executable verification suite runs with:
-
-```powershell
-dotnet run --project Backend/Levio.ArchitectureTests --configuration Release
-```
-
-It checks project and assembly boundaries, the pre-refactor relational model and
-persisted seed data, migration SQL/history, snapshot consistency, real HTTP
-controller/Swagger discovery, login DTOs, configured JWT lifetimes, token
-validation, Employee/HRAdmin authorization, refresh rotation, logout revocation,
-invalid/expired tokens, and startup configuration validation. HTTP checks use
-in-memory repository doubles with the real application services and middleware;
-they never use the application's database connection.
-Leave calendar checks run without SQL Server. With the test-server variable set,
-the suite additionally checks the new leave APIs against real repositories and
-SQL Server transactions: working-day reservations, draft submission, full/half-day
-cancellation, WFH accounting, validation, stable history pagination, active users,
-owner/manager/HR authorization, concurrent overlap/balance checks, and rollback
-after an injected post-save failure. Only uniquely named test databases are used.
-
-To also apply migrations and query seeds against a fresh SQL Server database:
-
-```powershell
-$env:LEVIO_TEST_SQLSERVER = 'Server=(localdb)\MSSQLLocalDB;Integrated Security=true;TrustServerCertificate=true'
-dotnet run --project Backend/Levio.ArchitectureTests --configuration Release
-Remove-Item Env:LEVIO_TEST_SQLSERVER
-```
-
-Use a disposable test server with permission to create databases. The suite
-overrides the supplied catalog with `Levio_ModularTests_<random ID>` and deletes
-that database in `finally`; it never reads the application connection string.
-Without this environment variable, only the SQL Server integration check is skipped.
-
-`database-baseline.json` was captured before the conversion. It intentionally
-retains the original model, seeds and migration SQL; the comparison ignores EF's
-nonpersisted navigation values and SQL line-ending differences. A failure writes
-`database-actual.json` into build output for diagnosis. Do not regenerate the
-baseline simply to make a schema regression pass.
-
-Identity maps its user DTO directly without AutoMapper. Infrastructure explicitly
-pins System.Security.Cryptography.Pkcs 9.0.21 to override SqlClient's vulnerable
-transitive version; NuGet vulnerability checks remain enabled.
+allocation UI, password reset and lockout workflows, notifications and the React
+frontend remain unfinished. No email delivery, document upload or production
+deployment is included in this milestone.
