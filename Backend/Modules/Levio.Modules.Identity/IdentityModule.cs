@@ -30,9 +30,12 @@ public static class IdentityModule
             .Validate(s => s.AccessTokenMinutes > 0 && s.RefreshTokenDays > 0, "JWT lifetimes must be positive.")
             .ValidateOnStart();
         services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<InitialAdministratorProvisioner>();
+        services.AddHostedService<InitialAdministratorProvisioningService>();
         services.AddScoped<IEmployeeDirectory, EmployeeDirectory>();
         services.AddScoped<IPasswordHasher, PasswordHasher>();
         services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddOptions<InitialAdministratorSettings>().Bind(configuration.GetSection("InitialAdministrator"));
         services.AddControllers().AddApplicationPart(typeof(AuthController).Assembly);
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
         services.AddOptions<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme)

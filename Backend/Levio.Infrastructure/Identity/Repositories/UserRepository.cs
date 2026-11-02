@@ -32,6 +32,11 @@ namespace Levio.Infrastructure.Identity.Repositories
                 .FirstOrDefaultAsync(u => u.Id == userId && !u.IsDeleted);
         }
 
+        public async Task AddAsync(User user)
+        {
+            await Context.Users.AddAsync(user);
+        }
+
         public async Task<bool> ExistsByEmailAsync(string email)
         {
             return await Context.Users.AnyAsync(u => u.Email == email && !u.IsDeleted);
