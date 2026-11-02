@@ -1,6 +1,12 @@
 <Solution>
   <Project Path="Levio.WebApi/Levio.WebApi.csproj" />
-<Project Path="Levio.Application/Levio.Application.csproj" />
-<Project Path="Levio.Infrastructure/Levio.Infrastructure.csproj" />
-<Project Path="Levio.Domain/Levio.Domain.csproj" />
+  <Project Path="Levio.Infrastructure/Levio.Infrastructure.csproj" />
+  <Project Path="Levio.SharedKernel/Levio.SharedKernel.csproj" />
+  <Folder Name="/Modules/">
+    <Project Path="Modules/Levio.Modules.Identity.Contracts/Levio.Modules.Identity.Contracts.csproj" />
+    <Project Path="Modules/Levio.Modules.Identity/Levio.Modules.Identity.csproj" />
+    <Project Path="Modules/Levio.Modules.LeaveManagement/Levio.Modules.LeaveManagement.csproj" />
+    <Project Path="Modules/Levio.Modules.Auditing/Levio.Modules.Auditing.csproj" />
+  </Folder>
+  <Project Path="Levio.ArchitectureTests/Levio.ArchitectureTests.csproj" />
 </Solution>

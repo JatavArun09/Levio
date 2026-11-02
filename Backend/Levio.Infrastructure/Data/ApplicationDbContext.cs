@@ -1,4 +1,6 @@
-﻿using Levio.Domain.Entities;
+using Levio.Modules.Auditing.Domain.Entities;
+using Levio.Modules.Identity.Domain.Entities;
+using Levio.Modules.LeaveManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Levio.Infrastructure.Data
@@ -16,7 +18,6 @@ namespace Levio.Infrastructure.Data
         public DbSet<LeaveType> LeaveTypes => Set<LeaveType>();
         public DbSet<LeaveBalance> LeaveBalances => Set<LeaveBalance>();
         public DbSet<LeaveRequest> LeaveRequests => Set<LeaveRequest>();
-        public DbSet<RefreshToken> LeaveRefreshTokens => Set<RefreshToken>();
         public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
         public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
 

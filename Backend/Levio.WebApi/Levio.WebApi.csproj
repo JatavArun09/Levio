@@ -12,10 +12,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Levio.Application\Levio.Application.csproj" />
+    <ProjectReference Include="..\Modules\Levio.Modules.Identity\Levio.Modules.Identity.csproj" />
+    <ProjectReference Include="..\Modules\Levio.Modules.LeaveManagement\Levio.Modules.LeaveManagement.csproj" />
+    <ProjectReference Include="..\Modules\Levio.Modules.Auditing\Levio.Modules.Auditing.csproj" />
     <ProjectReference Include="..\Levio.Infrastructure\Levio.Infrastructure.csproj" />
   </ItemGroup>
 

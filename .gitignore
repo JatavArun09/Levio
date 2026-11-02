@@ -3,3 +3,14 @@
 ################################################################################
 
 /Backend/.vs/Levio.slnx/FileContentIndex
+
+# Local IDE state and build output
+**/.vs/
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+*.csproj.user
+*.suo
