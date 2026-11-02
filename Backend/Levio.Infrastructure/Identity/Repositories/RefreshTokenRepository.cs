@@ -18,11 +18,6 @@ namespace Levio.Infrastructure.Identity.Repositories
             return Context.RefreshTokens.FirstOrDefaultAsync(x => x.TokenHash == tokenHash);
         }
 
-        public Task<RefreshToken?> GetByTokenAsync(string token)
-        {
-            return Context.RefreshTokens.Include(x =>x.User).ThenInclude(x=>x.UserRoles).ThenInclude(x=>x.Role).FirstOrDefaultAsync(x => x.TokenHash == token);
-        }
-
         public async Task AddAsync(RefreshToken refreshToken)
         {
             await Context.RefreshTokens.AddAsync(refreshToken);

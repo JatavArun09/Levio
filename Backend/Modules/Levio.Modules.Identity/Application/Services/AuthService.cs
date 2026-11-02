@@ -6,6 +6,8 @@ using Levio.Modules.Identity.Domain.Repositories;
 using Levio.SharedKernel.Persistence;
 
 using Microsoft.Extensions.Options;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Levio.Modules.Identity.Application.Services
 {
@@ -38,24 +40,15 @@ namespace Levio.Modules.Identity.Application.Services
 
         public async Task<LoginResponseDto> LoginAsync(LoginRequestDto request)
         {
-
-            var user = await _userRepository.GetByEmailAsync(request.Email);
-            if (user is null)
-            {
-                throw new UnauthorizedAccessException("Invalid email....!");
-            }
-
-            var isPasswordValid = _passwordHasher.Verify(request.Password, user.PasswordHash);
-            if (!isPasswordValid)
-            {
-                throw new UnauthorizedAccessException("Invalid password....!");
-            }
+            var email = request.Email?.Trim();
+            var user = string.IsNullOrWhiteSpace(email) ? null : await _userRepository.GetByEmailAsync(email);
+            if (user is null || !user.ISActive || user.IsDeleted ||
+                !_passwordHasher.Verify(request.Password ?? string.Empty, user.PasswordHash))
+                throw new UnauthorizedAccessException("Invalid email or password.");
 
             user = await _userRepository.GetUserWithRolesAsync(user.Id);
-            if (user is null)
-            {
-                throw new UnauthorizedAccessException("User roles not found.");
-            }
+            if (user is null || !user.ISActive || user.IsDeleted)
+                throw new UnauthorizedAccessException("Invalid email or password.");
 
             var accessToken = _jwtTokenService.GenerateAccessToken(user);
             var refreshToken = _jwtTokenService.GenerateRefreshToken();
@@ -63,7 +56,7 @@ namespace Levio.Modules.Identity.Application.Services
             var refreshTokenEntity = new RefreshToken
             {
                 UserId = user.Id,
-                TokenHash = refreshToken,
+                TokenHash = HashRefreshToken(refreshToken),
                 ExpiresAt = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenDays),
                 CreatedAt = DateTime.UtcNow
             };
@@ -81,7 +74,9 @@ namespace Levio.Modules.Identity.Application.Services
 
         public async Task LogoutAsync(string refreshToken)
         {
-            var token = await _refreshTokenRepository.GetByTokenAsync(refreshToken);
+            if (string.IsNullOrWhiteSpace(refreshToken)) return;
+
+            var token = await _refreshTokenRepository.GetByTokenHashAsync(HashRefreshToken(refreshToken));
 
             if (token is null)
                 return;
@@ -93,7 +88,10 @@ namespace Levio.Modules.Identity.Application.Services
 
         public async Task<LoginResponseDto> RefreshTokenAsync(string refreshToken)
         {
-            var existingToken = await _refreshTokenRepository.GetByTokenHashAsync(refreshToken);
+            if (string.IsNullOrWhiteSpace(refreshToken))
+                throw new UnauthorizedAccessException("Invalid refresh token.");
+
+            var existingToken = await _refreshTokenRepository.GetByTokenHashAsync(HashRefreshToken(refreshToken));
 
             if (existingToken is null || existingToken.IsRevoked || existingToken.RevokedAt.HasValue)
             {
@@ -107,16 +105,16 @@ namespace Levio.Modules.Identity.Application.Services
 
             var user = await _userRepository.GetUserWithRolesAsync(existingToken.UserId);
 
-            if (user is null)
+            if (user is null || !user.ISActive || user.IsDeleted)
             {
-                throw new UnauthorizedAccessException("User not found.");
+                throw new UnauthorizedAccessException("Invalid refresh token.");
             }
 
             var accessToken = _jwtTokenService.GenerateAccessToken(user);
 
             var newRefreshToken = _jwtTokenService.GenerateRefreshToken();
 
-            existingToken.TokenHash = newRefreshToken;
+            existingToken.TokenHash = HashRefreshToken(newRefreshToken);
             existingToken.ExpiresAt = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenDays);
 
             await _refreshTokenRepository.UpdateAsync(existingToken);
@@ -139,5 +137,8 @@ namespace Levio.Modules.Identity.Application.Services
             EmployeeCode = user.EmployeeCode,
             Roles = user.UserRoles.Select(userRole => userRole.Role.Name).ToList()
         };
+
+        private static string HashRefreshToken(string refreshToken) =>
+            Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(refreshToken)));
     }
 }

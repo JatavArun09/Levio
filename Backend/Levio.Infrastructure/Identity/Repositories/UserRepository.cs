@@ -17,24 +17,24 @@ namespace Levio.Infrastructure.Identity.Repositories
         
         public async Task<User?> GetByEmailAsync(string email)
         {
-            return await Context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            return await Context.Users.FirstOrDefaultAsync(u => u.Email == email && !u.IsDeleted);
         }
 
         public async Task<User?> GetByEmployeeCodeAsync(string employeeCode)
         {
-            return await Context.Users.FirstOrDefaultAsync(u => u.EmployeeCode == employeeCode);
+            return await Context.Users.FirstOrDefaultAsync(u => u.EmployeeCode == employeeCode && !u.IsDeleted);
         }
 
         public async Task<User?> GetUserWithRolesAsync(long userId)
         {
             return await Context.Users.Include(x => x.UserRoles)
                 .ThenInclude(ur => ur.Role)
-                .FirstOrDefaultAsync(u => u.Id == userId);
+                .FirstOrDefaultAsync(u => u.Id == userId && !u.IsDeleted);
         }
 
         public async Task<bool> ExistsByEmailAsync(string email)
         {
-            return await Context.Users.AnyAsync(u => u.Email == email);
+            return await Context.Users.AnyAsync(u => u.Email == email && !u.IsDeleted);
         }
     }
 }

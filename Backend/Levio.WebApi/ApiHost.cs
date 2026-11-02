@@ -4,6 +4,7 @@ using Levio.Modules.Identity;
 using Levio.Modules.LeaveManagement;
 using Levio.WebApi.Middleware;
 using Microsoft.OpenApi;
+using System.Threading.RateLimiting;
 
 namespace Levio.WebApi;
 
@@ -33,6 +34,19 @@ public static class ApiHost
         builder.Services.AddAuditingModule();
         builder.Services.AddInfrastructure(builder.Configuration);
         builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddRateLimiter(options =>
+        {
+            options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+            options.AddPolicy("authentication", context => RateLimitPartition.GetFixedWindowLimiter(
+                partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+                factory: _ => new FixedWindowRateLimiterOptions
+                {
+                    PermitLimit = 5,
+                    Window = TimeSpan.FromMinutes(1),
+                    QueueLimit = 0,
+                    AutoReplenishment = true
+                }));
+        });
         builder.Services.AddSwaggerGen(options =>
         {
             options.SwaggerDoc("v1", new OpenApiInfo { Title = "Levio Leave Management API", Version = "v1" });
@@ -45,6 +59,13 @@ public static class ApiHost
         configure?.Invoke(builder);
         var app = builder.Build();
         app.UseMiddleware<GlobalExceptionMiddleware>();
+        app.Use(async (context, next) =>
+        {
+            context.Response.Headers.Append("X-Content-Type-Options", "nosniff");
+            context.Response.Headers.Append("X-Frame-Options", "DENY");
+            context.Response.Headers.Append("Referrer-Policy", "no-referrer");
+            await next();
+        });
         app.UseStatusCodePages(async context =>
         {
             var response = context.HttpContext.Response;
@@ -60,10 +81,12 @@ public static class ApiHost
         {
             app.UseSwagger();
             app.UseSwaggerUI();
-            app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+            app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription().AllowAnonymous();
         }
-        if (builder.Configuration.GetValue("HttpsRedirection:Enabled", true))
-            app.UseHttpsRedirection();
+        if (!app.Environment.IsDevelopment()) app.UseHsts();
+        app.UseHttpsRedirection();
+        app.UseRouting();
+        app.UseRateLimiter();
         app.UseAuthentication();
         app.UseAuthorization();
         app.MapControllers();
